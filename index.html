@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atenda do Ouro | Vitrine Suprema</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">ATENDA DO OURO</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Início</a></li>
+                <li><a href="#a-forja">Loja</a></li>
+                <li><a href="#arcano">Oráculos</a></li>
+                <li><a href="#contato">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="hero-content container">
+                <h1 class="fade-in">O Império da Abundância</h1>
+                <p class="fade-in-delay">Sintonize com as energias áureas através de nossos produtos e serviços misticos.</p>
+                <a href="#a-forja" class="btn-primary fade-in-delay">Explorar a Forja</a>
+            </div>
+        </section>
+
+        <section id="a-forja" class="container">
+            <h2 class="section-title">A Forja (MDF & Incensos)</h2>
+            <div id="products-grid" class="grid">
+                <!-- Injetado dinamicamente via JS -->
+                <div class="loading">Invocando produtos...</div>
+            </div>
+        </section>
+
+        <section id="arcano" class="container">
+            <h2 class="section-title">Arcano (Consultas & Arte)</h2>
+            <div id="services-grid" class="grid">
+                <!-- Injetado dinamicamente via JS -->
+                <div class="loading">Consultando os astros...</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 Atenda do Ouro. Todos os direitos reservados.</p>
+            <p class="tagline">Onde o místico encontra o tangível.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

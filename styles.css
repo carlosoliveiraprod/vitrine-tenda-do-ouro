@@ -1,0 +1,191 @@
+/* Design System - Atenda do Ouro */
+:root {
+    --bg-color: #0a0a0a;
+    --text-primary: #ffffff;
+    --text-secondary: #a0a0a0;
+    --gold: #d4af37;
+    --gold-glow: rgba(212, 175, 55, 0.3);
+    --card-bg: #141414;
+    --container-width: 1200px;
+    --font-header: 'Cinzel', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Nav */
+header {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-header);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-shadow: 0 0 15px var(--gold-glow);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold);
+}
+
+/* Hero Section */
+#hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #0a0a0a 100%);
+}
+
+.hero-content h1 {
+    font-family: var(--font-header);
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 2rem;
+}
+
+/* Grids & Cards */
+.section-title {
+    font-family: var(--font-header);
+    font-size: 2rem;
+    text-align: center;
+    margin: 4rem 0 3rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid rgba(212, 175, 55, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: transform 0.3s, border-color 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+}
+
+.card img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    background-color: #000;
+}
+
+.card h3 {
+    font-family: var(--font-header);
+    margin-bottom: 0.5rem;
+}
+
+.card .price {
+    font-weight: 600;
+    color: var(--gold);
+    font-size: 1.2rem;
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--gold);
+    color: var(--bg-color);
+    box-shadow: 0 0 20px var(--gold-glow);
+}
+
+/* States */
+.loading, .error {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in { animation: fadeIn 1s ease forwards; }
+.fade-in-delay { animation: fadeIn 1s ease 0.5s forwards; opacity: 0; }
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-content h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Mobile menu needed but out of scope for now */
+}
