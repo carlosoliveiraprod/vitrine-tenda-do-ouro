@@ -3,7 +3,7 @@
  * Vanilla JS dynamic injector
  */
 
-const API_URL = 'http:/https://n8n.atendadoouro.com.br/api/v1/webhook/vitrine-forja'; // Endpoint fictício n8n
+const API_URL = 'https://n8n.atendadoouro.com.br/api/v1/webhook/vitrine-forja'; // Endpoint fictício n8n
 const FALLBACK_MESSAGE = 'As energias estão a ser realinhadas. Volte em instantes.';
 
 async function fetchStoreData() {
